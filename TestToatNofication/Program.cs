@@ -43,28 +43,32 @@ namespace TestToatNofication
                     BindingGeneric = new ToastBindingGeneric()
                     {
                         Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = message
-                    },
-
-                }
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = message
+                            }
+                        }
                     }
                 },
                 Actions = new ToastActionsCustom()
                 {
                     Buttons = { new ToastButton("Yes", "Yes"), new ToastButton("No", "No") }
                 },
-                Header = new ToastHeader("header", "App", "header")
+                Header = new ToastHeader("header", "App", "header"),
+                Duration = ToastDuration.Long
+
             };
 
-            var doc = new XmlDocument();
-            doc.LoadXml(toastContent.GetContent());
+            toastContent.AdditionalProperties.Add("lkjsdlfkjsdf", "sdlfjlskjsldfkjsdifjlkjsdlfkj");
 
+            var doc = new XmlDocument();
+           
+            doc.LoadXml(toastContent.GetContent());
+            
             var promptNotification = new ToastNotification(doc);
             promptNotification.Activated += PromptNotificationOnActivated;
-
+            promptNotification.Tag = "sdlkjsdflkjsflkjsdlfkjsldkjf";
             ToastNotificationManagerCompat.CreateToastNotifier().Show(promptNotification);
         }
 
@@ -72,6 +76,7 @@ namespace TestToatNofication
         {
             ToastActivatedEventArgs strArgs = args as ToastActivatedEventArgs;
 
+            Console.WriteLine(sender.Tag);
             switch (strArgs.Arguments)
             {
                 case "Yes":
