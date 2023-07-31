@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestToatNofication", "TestToatNofication\TestToatNofication.csproj", "{FC4896EB-9DF3-4775-929C-BB51223B6EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC4896EB-9DF3-4775-929C-BB51223B6EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4896EB-9DF3-4775-929C-BB51223B6EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4896EB-9DF3-4775-929C-BB51223B6EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4896EB-9DF3-4775-929C-BB51223B6EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5DB3BFE-5E96-4BF7-87E0-EA4BE268CB35}
+	EndGlobalSection
+EndGlobal
